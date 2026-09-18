@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ellen Dancal | Administrative Virtual Assistant</title>
+<meta name="description" content="Ellen Dancal — Administrative Virtual Assistant specializing in recruitment support, data entry, document management, records management and online systems.">
+<style>
+:root{
+  --navy:#12233f; --blue:#2563eb; --sky:#eff6ff; --ink:#172033;
+  --muted:#667085; --line:#e5e7eb; --white:#fff; --soft:#f8fafc;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.65}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:21px;color:var(--navy)} .logo span{color:var(--blue)}
+.navlinks{display:flex;gap:26px;font-size:14px;color:#475467}
+.navlinks a:hover{color:var(--blue)}
+.hero{background:linear-gradient(135deg,#f8fbff 0%,#eef5ff 100%);padding:92px 0 78px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}
+.badge{display:inline-block;background:#dbeafe;color:#1d4ed8;padding:7px 13px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(42px,6vw,70px);line-height:1.04;letter-spacing:-2px;color:var(--navy);margin-bottom:22px}
+h1 span{color:var(--blue)}
+.lead{font-size:19px;color:#475467;max-width:680px;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;font-weight:700;font-size:14px}
+.primary{background:var(--blue);color:#fff}.secondary{background:#fff;border:1px solid #cbd5e1;color:var(--navy)}
+.hero-card{background:#fff;border:1px solid #dbe4f0;border-radius:20px;padding:28px;box-shadow:0 20px 60px rgba(30,64,175,.10)}
+.hero-card .top{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.avatar{width:58px;height:58px;border-radius:16px;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800;font-size:21px}
+.hero-card h3{font-size:18px}.hero-card p{font-size:13px;color:var(--muted)}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{padding:16px;background:var(--soft);border-radius:12px}.stat b{display:block;font-size:20px;color:var(--navy)}.stat small{color:var(--muted)}
+section{padding:82px 0}.section-head{max-width:700px;margin-bottom:42px}.eyebrow{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:1.6px;text-transform:uppercase;margin-bottom:9px}
+h2{font-size:38px;line-height:1.15;color:var(--navy);letter-spacing:-1px;margin-bottom:13px}.section-head p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.about-copy p{margin-bottom:16px;color:#475467}
+.checks{display:grid;gap:12px}.check{display:flex;gap:12px;align-items:flex-start;padding:15px;border:1px solid var(--line);border-radius:12px}.check i{width:23px;height:23px;border-radius:50%;background:#dbeafe;color:#1d4ed8;display:grid;place-items:center;font-style:normal;font-weight:800;font-size:12px;flex:none}
+.services{background:var(--soft)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:25px}.icon{font-size:24px;margin-bottom:14px}.card h3{font-size:18px;color:var(--navy);margin-bottom:7px}.card p{font-size:14px;color:var(--muted)}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.work{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}.work-top{padding:24px 24px 16px}.tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#1d4ed8;font-weight:800}.work h3{font-size:22px;color:var(--navy);margin:7px 0}.work p{font-size:14px;color:var(--muted)}
+.mock{margin:0 20px 20px;border:1px solid #dbe2ea;border-radius:12px;overflow:hidden;background:#fbfdff}.mockbar{height:34px;background:#eaf0f7;display:flex;align-items:center;gap:6px;padding:0 12px}.dot{width:7px;height:7px;border-radius:50%;background:#94a3b8}.mockbody{padding:13px}.mnav{height:9px;width:55%;background:#cbd5e1;border-radius:5px;margin-bottom:13px}.row{display:grid;grid-template-columns:1.1fr .9fr .7fr .7fr;gap:7px;margin-bottom:7px}.cell{height:10px;background:#e2e8f0;border-radius:3px}.cell.dark{background:#94a3b8}.work-list{padding:0 24px 25px;display:grid;gap:8px}.work-list li{list-style:none;font-size:13px;color:#475467}.work-list li:before{content:"✓";color:var(--blue);font-weight:800;margin-right:8px}
+.experience{background:var(--navy);color:#fff}.experience h2{color:#fff}.experience .section-head p{color:#cbd5e1}.timeline{border-left:2px solid #3b82f6;padding-left:26px}.job{margin-bottom:34px}.job h3{font-size:21px}.job .meta{color:#93c5fd;font-size:13px;margin:4px 0 9px}.job p{color:#dbe4f0;max-width:820px}.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.tool{border:1px solid #334155;padding:8px 12px;border-radius:999px;color:#e2e8f0;font-size:13px}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{border:1px solid var(--line);padding:22px;border-radius:15px}.num{font-size:12px;color:var(--blue);font-weight:800}.step h3{margin:6px 0;color:var(--navy);font-size:17px}.step p{font-size:13px;color:var(--muted)}
+.contact{background:linear-gradient(135deg,#eff6ff,#f8fafc);text-align:center}.contact p{max-width:650px;margin:0 auto 25px;color:var(--muted)}
+footer{padding:25px 0;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:850px){.hero-grid,.about-grid,.work-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+@media(max-width:560px){.cards,.process-grid{grid-template-columns:1fr}section{padding:60px 0}.hero{padding:65px 0}.hero-card{margin-top:10px}}
+.photo-avatar{overflow:hidden;padding:0;background:#fff}.photo-avatar img{width:100%;height:100%;object-fit:cover;display:block}</style>
+</head>
+<body>
+<nav><div class="container navin">
+  <a class="logo" href="#home">Ellen<span>Dancal</span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work Samples</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header id="home" class="hero"><div class="container hero-grid">
+  <div>
+    <div class="badge">AVAILABLE FOR REMOTE WORK</div>
+    <h1>Administrative <span>Virtual Assistant</span></h1>
+    <p class="lead">Reliable administrative support for busy business owners and teams — with hands-on experience in recruitment operations, data entry, document management, records tracking, scheduling, and online systems.</p>
+    <div class="btns"><a class="btn primary" href="#contact">Let's Work Together</a><a class="btn secondary" href="#work">View My Work</a></div>
+  </div>
+  <div class="hero-card">
+    <div class="top"><div class="avatar photo-avatar"><img src="profile-photo.jpeg" alt="Ellen Dancal - Administrative Virtual Assistant"></div><div><h3>Ellen Dancal</h3><p>Administrative & Recruitment Support</p></div></div>
+    <div class="statgrid">
+      <div class="stat"><b>12+ yrs</b><small>Office & admin experience</small></div>
+      <div class="stat"><b>4 areas</b><small>Recruitment systems handled</small></div>
+      <div class="stat"><b>Detail-focused</b><small>Records & documents</small></div>
+      <div class="stat"><b>Remote-ready</b><small>Digital workflows</small></div>
+    </div>
+  </div>
+</div></header>
+
+<section id="about"><div class="container">
+  <div class="section-head"><div class="eyebrow">About Me</div><h2>Organized support that keeps work moving.</h2><p>I help clients stay on top of information, documents, schedules, and day-to-day administrative tasks.</p></div>
+  <div class="about-grid">
+    <div class="about-copy">
+      <p>I’m Ellen Dancal from the Philippines. My background includes office administration and recruitment support, where accuracy, confidentiality, organization, and follow-up are part of my daily work.</p>
+      <p>I have hands-on experience using internal management systems and the <strong>Musaned</strong> platform to maintain applicant records, track recruitment requests, monitor documents and statuses, and support employment processing.</p>
+      <p>I’m a fast learner, detail-oriented, reliable, and comfortable learning new tools and processes.</p>
+    </div>
+    <div class="checks">
+      <div class="check"><i>✓</i><div><b>Accurate Data Entry</b><br><small>Careful encoding, updating, checking, and organizing records.</small></div></div>
+      <div class="check"><i>✓</i><div><b>Document & Records Management</b><br><small>Structured digital files and easy-to-retrieve information.</small></div></div>
+      <div class="check"><i>✓</i><div><b>Recruitment Administrative Support</b><br><small>Applicant tracking, requirements monitoring, and follow-up.</small></div></div>
+      <div class="check"><i>✓</i><div><b>Professional & Confidential</b><br><small>Experienced with sensitive applicant and employment records.</small></div></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services" class="services"><div class="container">
+  <div class="section-head"><div class="eyebrow">Services</div><h2>How I can support your business</h2><p>Practical administrative services designed to reduce your workload and keep your information organized.</p></div>
+  <div class="cards">
+    <div class="card"><div class="icon">📧</div><h3>Email & Calendar Support</h3><p>Email organization, scheduling, appointment coordination, reminders, and meeting arrangements.</p></div>
+    <div class="card"><div class="icon">📁</div><h3>Document Management</h3><p>File organization, document preparation, records maintenance, PDF handling, and digital filing.</p></div>
+    <div class="card"><div class="icon">⌨️</div><h3>Data Entry</h3><p>Accurate encoding, database updates, data cleanup, spreadsheet work, and information organization.</p></div>
+    <div class="card"><div class="icon">👥</div><h3>Recruitment Support</h3><p>Applicant records, requirements tracking, status monitoring, follow-ups, and administrative coordination.</p></div>
+    <div class="card"><div class="icon">🔎</div><h3>Online Research</h3><p>Web research, information gathering, data compilation, and organized research notes.</p></div>
+    <div class="card"><div class="icon">🛒</div><h3>E-commerce Support</h3><p>Administrative assistance for online stores, product information, customer support, and routine back-office tasks.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="container">
+  <div class="section-head"><div class="eyebrow">Work Samples</div><h2>Real-world administrative systems experience</h2><p>These examples are based on systems and workflows I have worked with. Public samples use fictional data to protect confidentiality.</p></div>
+  <div class="work-grid">
+    <article class="work">
+      <div class="work-top"><div class="tag">01 · Internal MIS</div><h3>Applicant Database & Document Management</h3><p>Maintained applicant records and organized access to CVs, application forms, and recruitment documents.</p></div>
+      <div class="mock"><div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="mockbody"><div class="mnav"></div><div class="row"><div class="cell dark"></div><div class="cell dark"></div><div class="cell"></div><div class="cell"></div></div><div class="row"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div><div class="row"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div></div></div>
+      <ul class="work-list"><li>Applicant record maintenance</li><li>Document organization and retrieval</li><li>Data updates and record checking</li></ul>
+    </article>
+    <article class="work">
+      <div class="work-top"><div class="tag">02 · Internal MIS</div><h3>Medical & TESDA Tracking</h3><p>Tracked medical schedules, statuses, TESDA schedules, reference numbers, and pending requirements.</p></div>
+      <div class="mock"><div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="mockbody"><div class="mnav"></div><div class="row"><div class="cell dark"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div><div class="row"><div class="cell"></div><div class="cell dark"></div><div class="cell"></div><div class="cell"></div></div><div class="row"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div></div></div></div>
+      <ul class="work-list"><li>Medical status and schedule monitoring</li><li>TESDA information updates</li><li>Pending requirement follow-up</li></ul>
+    </article>
+    <article class="work">
+      <div class="work-top"><div class="tag">03 · Records Monitoring</div><h3>Medical Records Status Tracking</h3><p>Maintained administrative tracking of medical records, test information, comments, and follow-up dates.</p></div>
+      <div class="mock"><div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="mockbody"><div class="mnav"></div><div class="row"><div class="cell dark"></div><div class="cell"></div><div class="cell dark"></div><div class="cell"></div></div><div class="row"><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell dark"></div></div><div class="row"><div class="cell"></div><div class="cell"></div><div class="cell dark"></div><div class="cell"></div></div></div></div>
+      <ul class="work-list"><li>Record updates and status monitoring</li><li>Follow-up date tracking</li><li>Administrative coordination</li></ul>
+    </article>
+    <article class="work">
+      <div class="work-top"><div class="tag">04 · Musaned</div><h3>Recruitment Request & Contract Tracking</h3><p>Used the Musaned platform to monitor recruitment requests, candidate/employer records, contracts, visa information, payment status, and processing updates.</p></div>
+      <div class="mock"><div class="mockbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="mockbody"><div class="mnav"></div><div class="row"><div class="cell dark"></div><div class="cell"></div><div class="cell"></div><div class="cell dark"></div></div><div class="row"><div class="cell"></div><div class="cell dark"></div><div class="cell"></div><div class="cell"></div></div><div class="row"><div class="cell"></div><div class="cell"></div><div class="cell dark"></div><div class="cell"></div></div></div></div>
+      <ul class="work-list"><li>Recruitment request monitoring</li><li>Contract and visa information tracking</li><li>Payment and processing status checking</li></ul>
+    </article>
+  </div>
+</div></section>
+
+<section id="experience" class="experience"><div class="container">
+  <div class="section-head"><div class="eyebrow">Experience</div><h2>Professional background</h2><p>Administrative experience built through real office and recruitment workflows.</p></div>
+  <div class="timeline">
+    <div class="job"><h3>Corporate Secretary / Administrative Support</h3><div class="meta">Emmanuel Staffing Services, Inc. · Philippines</div><p>Handled administrative records, recruitment documentation, applicant information, internal systems, coordination, and routine office support. Progressed from office staff responsibilities into a corporate secretary role.</p></div>
+    <div class="job"><h3>Virtual Assistant — Recruitment & Administrative Support</h3><div class="meta">Portfolio / Remote-ready services</div><p>Focused on email and calendar support, document organization, data entry, online research, recruitment administration, and digital records management.</p></div>
+  </div>
+  <div class="tools">
+    <span class="tool">Microsoft Word</span><span class="tool">Microsoft Excel</span><span class="tool">Google Docs</span><span class="tool">Google Workspace</span><span class="tool">Canva</span><span class="tool">Gmail</span><span class="tool">Zoom</span><span class="tool">PDF Tools</span><span class="tool">Online Systems</span><span class="tool">Musaned</span>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="section-head"><div class="eyebrow">My Workflow</div><h2>Simple, organized, dependable</h2><p>I follow a clear process so tasks are completed accurately and clients know what is happening.</p></div>
+  <div class="process-grid">
+    <div class="step"><div class="num">01</div><h3>Understand</h3><p>Clarify the task, deadline, required format, and priority.</p></div>
+    <div class="step"><div class="num">02</div><h3>Organize</h3><p>Sort information, documents, and priorities before starting.</p></div>
+    <div class="step"><div class="num">03</div><h3>Complete</h3><p>Work carefully, update records, and follow the agreed process.</p></div>
+    <div class="step"><div class="num">04</div><h3>Check & Report</h3><p>Review the output and provide a clear status or completed-task update.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="container">
+  <div class="eyebrow">Let's Connect</div><h2>Need a reliable Administrative VA?</h2>
+  <p>I’m open to long-term remote opportunities where I can support daily operations, keep information organized, and help your team stay productive.</p>
+  <div class="btns" style="justify-content:center">
+    <a class="btn primary" href="mailto:your.email@example.com">Email Me</a>
+    <a class="btn secondary" href="#home">Back to Top</a>
+  </div>
+  
+</div></section>
+
+<footer><div class="container foot"><span>© 2026 Ellen Dancal. All rights reserved.</span><span>Administrative VA · Recruitment Support · Data Entry</span></div></footer>
+</body>
+</html>
